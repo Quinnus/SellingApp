@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Interface {
 
+	// interface creates hard-coded objects and displays options on screen for user
 	public static void startUI() {
 		ArrayList<Order> shopping = new ArrayList<>();
 		boolean running = true;

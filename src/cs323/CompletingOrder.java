@@ -1,6 +1,6 @@
 package cs323;
 
-public class CompletingOrder extends Order {
+public class CompletingOrder extends Order {  //extended Order class with child specific changes
 	private String estimatedDelivery;
 
 	public CompletingOrder(String customerName, String itemOrdered, double itemPrice, String deliveryDate) {
@@ -8,7 +8,7 @@ public class CompletingOrder extends Order {
 		this.estimatedDelivery = deliveryDate;
 	}
 
-	@Override
+	@Override //overrides for orderStatus and isCancellable
 	public String getOrderStatus() {
 		return ("Preparing to ship, estimated delivery date: " + estimatedDelivery);
 	}

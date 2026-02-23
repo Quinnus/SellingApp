@@ -1,8 +1,9 @@
 package cs323;
 
-abstract class Order {
+abstract class Order { //abstract class, child objects are modified as required
 
-	private static int orderID = 1000;
+	private static int orderID = 1000; // class specific variable for order number, increments each time an order is
+	// created
 
 	private String customerName;
 	private String itemOrdered;
@@ -11,7 +12,7 @@ abstract class Order {
 
 	public Order(String customerName, String itemOrdered, double itemPrice) {
 		this.orderNumber = orderID;
-		orderID++;
+		orderID++;  //assign and increment order number
 		this.customerName = customerName;
 		this.itemOrdered = itemOrdered;
 		this.itemPrice = itemPrice;
@@ -19,7 +20,7 @@ abstract class Order {
 
 	public static int getOrderID() {
 		return orderID;
-	}
+	} // class methods
 
 	public double getItemPrice() {
 		return this.itemPrice;
@@ -41,7 +42,7 @@ abstract class Order {
 
 	public abstract boolean isCancellable();
 
-	public void printSummary() {
+	public void printSummary() { //summary for orders - modified at child level
 		System.out.println("Customer Name: " + getCustomerName());
 		System.out.println("OrderID: " + getOrderNumber());
 		System.out.println("Order Description: " + getItemOrdered());

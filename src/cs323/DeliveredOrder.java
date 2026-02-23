@@ -1,6 +1,6 @@
 package cs323;
 
-public class DeliveredOrder extends Order {
+public class DeliveredOrder extends Order {  //extended Order class with child specific changes
 
 	private String customerFeedback;
 
@@ -13,7 +13,7 @@ public class DeliveredOrder extends Order {
 		return this.customerFeedback;
 	}
 
-	@Override
+	@Override //overrides for orderStatus and isCancellable
 	public String getOrderStatus() {
 		return ("Order handed to customer, feedback received: " + customerFeedback);
 	}
